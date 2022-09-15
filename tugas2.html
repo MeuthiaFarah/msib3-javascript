@@ -1,0 +1,71 @@
+<h3 align="center">Daftar Pegawai</h3>
+<table align="center" cellpadding="10">
+	<thead>
+		<tr bgcolor="cyan">
+			<th>No</th>
+			<th>Nama</th>
+			<th>Jabatan</th>
+			<th>Agama</th>
+			<th>Gaji Pokok</th>
+			<th>Tunjangan Jabatan</th>
+			<th>Tunjangan Kesehatan</th>
+			<th>Gaji Kotor</th>
+			<th>Zakat Profesi</th>
+			<th>Take Home Pay</th>
+		</tr>
+	</thead>
+	<tbody>
+		<script lang="javascript">
+
+			var no, jabatan, gapok, tunjangan_jabatan, tunjangan_kesehatan, gaji_kotor, zakat,take_home_pay, agama, warna;
+			for(no = 1; no <= 100; no++){
+			    if(no <= 25){
+			        jabatan = 'Manager';
+			    }
+			    else if(no >= 26 && no <= 50){
+			        jabatan = 'Asisten Manager';
+			    }
+			    else if(no >= 51 && no <= 75){
+			        jabatan = 'Supervisor';
+			    }
+			    else if(no >= 76 && no <= 100){
+			        jabatan = 'Staff';
+			    }
+			    else{
+			        jabatan = '-';
+			    }
+			    gapok = 0
+			    switch(jabatan){
+			        case 'Manager' : gapok= 15000000; break;
+			        case 'Asisten Manager' : gapok= 10000000; break;
+			        case 'Supervisor' : gapok= 7000000; break;
+			        case 'Staff' : gapok= 4000000; break;
+			        default: gapok = 0;
+			    }
+
+					// baris ganjil muslim = kuning, baris genap nonis = biru
+					agama = (no % 2 == 1) ? 'Islam' : 'Non Muslim';
+			    warna = (no % 2 == 1) ? 'yellow' :'sky-blue';
+
+			    let tunjangan_jabatan = 20/100 * gapok;
+			    let tunjangan_kesehatan = 10/100 * gapok;
+			    let gaji_kotor = gapok + tunjangan_jabatan + tunjangan_kesehatan;
+			    let zakat_profesi = (no % 2 == 1 && gapok >= 7000000) ? 2.5/100 * gapok : 0;
+			    let take_home_pay = gaji_kotor - zakat_profesi;
+
+			    document.write(`<tr bgcolor="${warna}">
+			        <td>${no}</td>
+			        <td>Pegawai ${no}</td>
+			        <td>${jabatan}</td>
+			        <td>${agama}</td>
+			        <td>${gapok}</td>
+			        <td>${tunjangan_jabatan}</td>
+			        <td>${tunjangan_kesehatan}</td>
+			        <td>${gaji_kotor}</td>
+			        <td>${zakat_profesi}</td>
+			        <td>${take_home_pay}</td>
+			    </tr>`);
+			}
+		</script>
+	</tbody>
+</table>
