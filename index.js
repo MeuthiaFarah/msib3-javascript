@@ -69,7 +69,7 @@ $(function () {
 
 	/* gambar sapi */
 	$(".sapi").on("click", function () {
-		$(".gambarASapi")
+		$(".gambarSapi")
 			.attr({
 				src: "image/sapi.jfif",
 			})
@@ -81,9 +81,9 @@ $(function () {
 				autoplay: "autoplay",
 			})
 			.appendTo(".gambarSapi");
-  });
-  
-  	/* gambar domba */
+	});
+
+	/* gambar domba */
 	$(".domba").on("click", function () {
 		$(".gambarDomba")
 			.attr({
@@ -97,9 +97,9 @@ $(function () {
 				autoplay: "autoplay",
 			})
 			.appendTo(".gambarDomba");
-  });
-  
-  	/* gambar kambing */
+	});
+
+	/* gambar kambing */
 	$(".kambing").on("click", function () {
 		$(".gambarKambing")
 			.attr({
@@ -108,26 +108,91 @@ $(function () {
 			.height(160);
 		$("<audio><audio/>")
 			.attr({
-				src: "sound/rooster_059e5f1f5412596.mp3",
+				src: "sound/thegoatsou_62393e375387676.mp3",
 				volume: 0.4,
 				autoplay: "autoplay",
 			})
-			.appendTo(".gambarAyam");
-  });
-  
-  	/* gambar ayam */
-	$(".ayam").on("click", function () {
-		$(".gambarAyam")
+			.appendTo(".gambarKambing");
+	});
+
+	/* gambar babi */
+	$(".babi").on("click", function () {
+		$(".gambarBabi")
 			.attr({
-				src: "image/ayam.jfif",
+				src: "image/babi.jfif",
 			})
 			.height(160);
 		$("<audio><audio/>")
 			.attr({
-				src: "sound/rooster_059e5f1f5412596.mp3",
+				src: "sound/pig_134b68964691683.mp3",
 				volume: 0.4,
 				autoplay: "autoplay",
 			})
-			.appendTo(".gambarAyam");
+			.appendTo(".gambarBabi");
+	});
+
+	/* gambar serigala */
+	$(".serigala").on("click", function () {
+		$(".gambarSerigala")
+			.attr({
+				src: "image/serigala.jfif",
+			})
+			.height(160);
+		$("<audio><audio/>")
+			.attr({
+				src: "sound/wolfhowl_65f5f83a4968494.mp3",
+				volume: 0.4,
+				autoplay: "autoplay",
+			})
+			.appendTo(".gambarSerigala");
+	});
+
+	/* gambar harimau */
+	$(".harimau").on("click", function () {
+		$(".gambarHarimau")
+			.attr({
+				src: "image/harimau.jfif",
+			})
+			.height(160);
+		$("<audio><audio/>")
+			.attr({
+				src: "sound/tigerro_2caaeeb05395841.mp3",
+				volume: 0.4,
+				autoplay: "autoplay",
+			})
+			.appendTo(".gambarHarimau");
+	});
+
+	/* gambar singa */
+	$(".singa").on("click", function () {
+		$(".gambarSinga")
+			.attr({
+				src: "image/singa.jfif",
+			})
+			.height(160);
+		$("<audio><audio/>")
+			.attr({
+				src: "sound/lion_f3d694b44990467.mp3",
+				volume: 0.4,
+				autoplay: "autoplay",
+			})
+			.appendTo(".gambarSinga");
+	});
+
+	/* gambar elang */
+	$(".elang").on("click", function () {
+		$(".gambarElang")
+			.attr({
+				src: "image/elang.jfif",
+			})
+			.width(238)
+			.height(160);
+		$("<audio><audio/>")
+			.attr({
+				src: "sound/eaglevoice_44d568045010874.mp3",
+				volume: 0.4,
+				autoplay: "autoplay",
+			})
+			.appendTo(".gambarElang");
 	});
 });
